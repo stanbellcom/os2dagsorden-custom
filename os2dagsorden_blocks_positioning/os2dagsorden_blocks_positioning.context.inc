@@ -98,7 +98,7 @@ function os2dagsorden_blocks_positioning_context_default_contexts() {
   $export['os2dagsorden_annotator_light'] = $context;
 
   $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'os2dagsorden_calendar_block';
   $context->description = 'Sidepane and the calendar block. Will be shown everywhere except the month view of a big calendar, and the pages with text (attachments).';
