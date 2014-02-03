@@ -20,26 +20,7 @@ function os2dagsorden_blocks_positioning_default_fe_block_settings() {
     ),
   );
 
-  // os2dagsorden_theme
-  $theme = array();
-
-  $theme['views--exp-meetings_search-page'] = array(
-    'module' => 'views',
-    'delta' => '-exp-meetings_search-page',
-    'theme' => 'os2dagsorden_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Søg',
-    'cache' => -1,
-  );
-
-  $export['theme']['os2dagsorden_theme'] = $theme;
-  
-    // os2dagsorden_theme ringsted
+  // os2dagsorden_theme ringsted
   $theme = array();
 
   $theme['views--exp-meetings_search-page'] = array(
@@ -55,9 +36,36 @@ function os2dagsorden_blocks_positioning_default_fe_block_settings() {
     'title' => 'Søg',
     'cache' => -1,
   );
+     
+  $theme['block-show_hide_menu_block'] = array(
+    'module' => 'block',
+    'theme' => 'os2dagsorden_theme_ringsted',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => -1,
+    'machine_name' => 'show_hide_menu_block',
+  );
+
+  $theme['menu-menu-sidepane-menu'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-sidepane-menu',
+    'theme' => 'os2dagsorden_theme_ringsted',
+    'status' => 0,
+    'weight' => '-19',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => -1,
+  );
 
   $export['theme']['os2dagsorden_theme_ringsted'] = $theme;
-  
    
   $theme_default = variable_get('theme_default', 'garland');
   $themes = list_themes();
