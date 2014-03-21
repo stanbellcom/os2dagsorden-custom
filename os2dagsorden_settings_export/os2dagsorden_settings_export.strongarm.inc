@@ -63,8 +63,15 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'os2dagsorden_collapse_menu';
-  $strongarm->value = 'false';
+  $strongarm->value = 'true';
   $export['os2dagsorden_collapse_menu'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_default_meeting_cateroty';
+  $strongarm->value = 'pol';
+  $export['os2dagsorden_default_meeting_cateroty'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -83,6 +90,27 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_expand_attachment_onload';
+  $strongarm->value = 0;
+  $export['os2dagsorden_expand_attachment_onload'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_expand_bilag_sag_bullet';
+  $strongarm->value = 1;
+  $export['os2dagsorden_expand_bilag_sag_bullet'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_follows_committee_send_notification';
+  $strongarm->value = 0;
+  $export['os2dagsorden_follows_committee_send_notification'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'os2dagsorden_group_closed_bullet_points';
   $strongarm->value = 'false';
   $export['os2dagsorden_group_closed_bullet_points'] = $strongarm;
@@ -91,8 +119,15 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'os2dagsorden_hidden_agenda_committee';
-  $strongarm->value = '28';
+  $strongarm->value = '';
   $export['os2dagsorden_hidden_agenda_committee'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_hide_show_container';
+  $strongarm->value = 'false';
+  $export['os2dagsorden_hide_show_container'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -105,7 +140,7 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'os2dagsorden_latest_meetings_view_mode';
-  $strongarm->value = 'all';
+  $strongarm->value = 'mine';
   $export['os2dagsorden_latest_meetings_view_mode'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -139,8 +174,15 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_my_committees_block_title';
+  $strongarm->value = 'Medlem af';
+  $export['os2dagsorden_my_committees_block_title'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'os2dagsorden_participants_delimeter';
-  $strongarm->value = '<br>';
+  $strongarm->value = '<br/>';
   $export['os2dagsorden_participants_delimeter'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -153,8 +195,15 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_pdf2htmlex_path';
+  $strongarm->value = '/usr/bin/pdf2htmlEX';
+  $export['os2dagsorden_pdf2htmlex_path'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'os2dagsorden_pws_use_local_copy';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['os2dagsorden_pws_use_local_copy'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -181,6 +230,30 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_sager_group_title';
+  $strongarm->value = 'Sagsdokumenter';
+  $export['os2dagsorden_sager_group_title'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_send_email_body';
+  $strongarm->value = 'Til !user
+
+Du abonnerer på !committee.
+Der er publiceret !meeting_type til !meeting_name !meeting_date.';
+  $export['os2dagsorden_send_email_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_send_email_subject';
+  $strongarm->value = '!meeting_type til !committee er publiceret';
+  $export['os2dagsorden_send_email_subject'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'os2dagsorden_send_notification_committee';
   $strongarm->value = '';
   $export['os2dagsorden_send_notification_committee'] = $strongarm;
@@ -202,8 +275,22 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_show_comments';
+  $strongarm->value = 0;
+  $export['os2dagsorden_show_comments'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_show_massive_expand_collapse_button';
+  $strongarm->value = 'true';
+  $export['os2dagsorden_show_massive_expand_collapse_button'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'os2dagsorden_show_meeting_category';
-  $strongarm->value = '';
+  $strongarm->value = 'false';
   $export['os2dagsorden_show_meeting_category'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -258,6 +345,23 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_show_search_block_title';
+  $strongarm->value = 'true';
+  $export['os2dagsorden_show_search_block_title'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_user_default_meeting_category';
+  $strongarm->value = array(
+    'pol' => 'pol',
+    'org' => 0,
+  );
+  $export['os2dagsorden_user_default_meeting_category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'os2web_adlib_url';
   $strongarm->value = 'http://706CAR01/ExponentWSA/ExponentWSA.asmx?wsdl';
   $export['os2web_adlib_url'] = $strongarm;
@@ -266,7 +370,7 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'os2web_meetings_approved_committee';
-  $strongarm->value = '138,28,136,59,62,59,64,53,54,165,104,56,57,63,58,51,55,61,68,69,42,28,71, 104,36,44,53,67,72,66,34';
+  $strongarm->value = '103,130,94,95,169,136,135,170,137,134,138,139,140,104,131,114,151,153,154,158,159,125,155,157,163,164,168,167,165,166';
   $export['os2web_meetings_approved_committee'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -282,6 +386,13 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm->name = 'os2web_meetings_path';
   $strongarm->value = 'private://';
   $export['os2web_meetings_path'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pdf2html_rendering_path';
+  $strongarm->value = '';
+  $export['pdf2html_rendering_path'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
