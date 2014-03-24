@@ -175,7 +175,7 @@ function os2dagsorden_settings_export_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'os2dagsorden_my_committees_block_title';
-  $strongarm->value = 'Medlem af';
+  $strongarm->value = 'Adgang lukket dagsorden';
   $export['os2dagsorden_my_committees_block_title'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -275,6 +275,20 @@ Der er publiceret !meeting_type til !meeting_name !meeting_date.';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_show_bilag_bullet_point';
+  $strongarm->value = 0;
+  $export['os2dagsorden_show_bilag_bullet_point'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'os2dagsorden_show_case_bullet_point';
+  $strongarm->value = 0;
+  $export['os2dagsorden_show_case_bullet_point'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'os2dagsorden_show_comments';
   $strongarm->value = 0;
   $export['os2dagsorden_show_comments'] = $strongarm;
@@ -362,9 +376,23 @@ Der er publiceret !meeting_type til !meeting_name !meeting_date.';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'os2web_acadre_add_committee_to_title';
+  $strongarm->value = 1;
+  $export['os2web_acadre_add_committee_to_title'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'os2web_adlib_url';
   $strongarm->value = 'http://706CAR01/ExponentWSA/ExponentWSA.asmx?wsdl';
   $export['os2web_adlib_url'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'os2web_convertion_dir';
+  $strongarm->value = 'public://os2convert';
+  $export['os2web_convertion_dir'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
