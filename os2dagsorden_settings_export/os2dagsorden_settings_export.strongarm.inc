@@ -423,7 +423,7 @@ Der er publiceret !meeting_type til !meeting_name !meeting_date.';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'os2web_adlib_url';
-  $strongarm->value = 'http://706CAR01/ExponentWSA/ExponentWSA.asmx?wsdl';
+  $strongarm->value = '';
   $export['os2web_adlib_url'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -437,7 +437,7 @@ Der er publiceret !meeting_type til !meeting_name !meeting_date.';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'os2web_meetings_approved_committee';
-  $strongarm->value = '103,130,94,95,169,136,135,170,137,134,138,139,140,104,131,114,151,153,154,158,159,125,155,157,163,164,168,167,165,166';
+  $strongarm->value = '94,95,103,104,114,125,130,131,134,135,136,137,138,139,140,151,153,154,155,157,158,159,163,164,165,166,167,168,169,170';
   $export['os2web_meetings_approved_committee'] = $strongarm;
 
   $strongarm = new stdClass();
